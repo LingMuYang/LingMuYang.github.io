@@ -5,18 +5,19 @@
   
 
   
-  <title>Hello World | Hexo</title>
+  <title>项目部署(入门篇) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="本篇播客讲的是如何在linux上如何部署一个新完成的项目，如有错误请联系15076117282@163.com ###Java环境 #####0.下载jdk8去官网下载最新安装包(可在Windows下下载完成后，通过文件夹共享到Linux上) #####1.登录Linux，切换到root用户su root获取root用户权限，当前工作目录不变（需要root密码）或 sudo -i不需要root密码">
+<meta name="keywords" content="tomcat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/03/15/hello-world/index.html">
+<meta property="og:title" content="项目部署(入门篇)">
+<meta property="og:url" content="http://yoursite.com/2018/09/19/tomcat/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2018-03-15T09:40:49.230Z">
+<meta property="og:description" content="本篇播客讲的是如何在linux上如何部署一个新完成的项目，如有错误请联系15076117282@163.com ###Java环境 #####0.下载jdk8去官网下载最新安装包(可在Windows下下载完成后，通过文件夹共享到Linux上) #####1.登录Linux，切换到root用户su root获取root用户权限，当前工作目录不变（需要root密码）或 sudo -i不需要root密码">
+<meta property="og:updated_time" content="2018-03-19T10:04:26.191Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="项目部署(入门篇)">
+<meta name="twitter:description" content="本篇播客讲的是如何在linux上如何部署一个新完成的项目，如有错误请联系15076117282@163.com ###Java环境 #####0.下载jdk8去官网下载最新安装包(可在Windows下下载完成后，通过文件夹共享到Linux上) #####1.登录Linux，切换到root用户su root获取root用户权限，当前工作目录不变（需要root密码）或 sudo -i不需要root密码">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,12 +64,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-tomcat" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/03/15/hello-world/" class="article-date">
-  <time datetime="2018-03-15T09:40:49.229Z" itemprop="datePublished">2018-03-15</time>
+    <a href="/2018/09/19/tomcat/" class="article-date">
+  <time datetime="2018-09-19T09:19:00.000Z" itemprop="datePublished">2018-09-19</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tomcat/">tomcat</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -77,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      项目部署(入门篇)
     </h1>
   
 
@@ -85,37 +90,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>本篇播客讲的是如何在linux上如何部署一个新完成的项目，如有错误请联系<a href="mailto:15076117282@163.com" target="_blank" rel="noopener">15076117282@163.com</a></p>
+<p>###Java环境</p>
+<p>#####0.下载jdk8<br>去<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">官网</a>下载最新安装包(可在Windows下下载完成后，通过文件夹共享到Linux上)</p>
+<p>#####1.登录Linux，切换到root用户<br>su root获取root用户权限，当前工作目录不变（需要root密码）<br>或 sudo -i不需要root密码直接切换成root（需要当前用户密码）</p>
+<p>#####2.在usr目录下建立java安装目录<br>cd /usr<br>mkdir java</p>
+<p>#####3.jdk-8u60-linux-x64.tar.gz拷贝到java目录下<br>cp/mnt/hgfs/linux/jdk-8u60-linux-x64.tar.gz/usr/java/<br>（版本根据自己需要自行选择）</p>
+<p>#####4.解压jdk到当前目录<br>tar -zxvf jdk-8u60-linux-x64.tar.gz<br>得到文件夹jdk1.8.0_60</p>
+<p>#####5.安装完毕为他建立一个链接以节省目录长度<br>In -s/usr/java/jdk1.8.0_60/ /usr/jdk</p>
+<p>#####6.编辑配置文件，配置环境变量<br>vim /etc/profile</p>
+<p>添加如下内容：JAVA_HOME根据实际目录来<br>JAVA_HOME=/usr/java/jdk1.8.0_60<br>CLASSPATH=$JAVA_HOME/lib/<br>PATH=$PATH:$JAVA_HOME/bin<br>export PATH JAVA_HOME CLASSPATH</p>
+<p>#####7.重启机器或者执行命令<br>source /etc/profile</p>
+<p>#####8.查看安装情况<br>java -version</p>
+<p>###Tomcat安装开始</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/15/hello-world/" data-id="cjez3sk5g0000zwhxhhumun4g" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/09/19/tomcat/" data-id="cjez3sk5k0001zwhxz1m53x1e" class="article-share-link">Teilen</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tomcat/">tomcat</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2018/03/19/git/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          git
-        
-      </div>
-    </a>
   
+    <a href="/2018/03/19/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">git</div>
+    </a>
   
 </nav>
 
