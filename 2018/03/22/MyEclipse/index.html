@@ -7,17 +7,17 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本片博客记录一些自己在使用myeclipse中遇到的一些问题，如有错误请联系15076117282@163.com ###1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved #####原因：这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myec">
+  <meta name="description" content="本片博客记录一些自己在使用myeclipse中遇到的一些问题，如有错误请联系15076117282@163.com 1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved原因：这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myeclipse\xxx">
 <meta name="keywords" content="myeclipse">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/2018/03/22/MyEclipse/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本片博客记录一些自己在使用myeclipse中遇到的一些问题，如有错误请联系15076117282@163.com ###1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved #####原因：这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myec">
-<meta property="og:updated_time" content="2018-03-22T01:18:54.528Z">
+<meta property="og:description" content="本片博客记录一些自己在使用myeclipse中遇到的一些问题，如有错误请联系15076117282@163.com 1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved原因：这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myeclipse\xxx">
+<meta property="og:updated_time" content="2018-03-22T01:22:59.065Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="本片博客记录一些自己在使用myeclipse中遇到的一些问题，如有错误请联系15076117282@163.com ###1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved #####原因：这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myec">
+<meta name="twitter:description" content="本片博客记录一些自己在使用myeclipse中遇到的一些问题，如有错误请联系15076117282@163.com 1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved原因：这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myeclipse\xxx">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -81,9 +81,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本片博客记录一些自己在使用myeclipse中遇到的一些问题，如有错误请联系<br><a href="mailto:15076117282@163.com" target="_blank" rel="noopener">15076117282@163.com</a></p>
-<p>###1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved</p>
-<p>#####原因：<br>这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myeclipse\xxxx）,结果，你现在换了一个，原来的没了，就导致出现这种错误，基本的java.lang或者util包都找不到</p>
-<p>#####解决方案<br>右键项目—》buildpath—》最下边那个confiura…的选择libraies<br>找到JRE（这个时候你会发现这个jre前面有!或者是红x）<br>选择remove掉<br>重新为该项目选择一个JRE<br>选中项目，project—-clean<br>刷新项目，问题就解决了</p>
+<h3 id="1-新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the-import-java-util-cannot-be-resolved"><a href="#1-新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the-import-java-util-cannot-be-resolved" class="headerlink" title="1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved"></a>1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved</h3><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myeclipse\xxxx）,结果，你现在换了一个，原来的没了，就导致出现这种错误，基本的java.lang或者util包都找不到</p>
+<h5 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h5><p>右键项目—》buildpath—》最下边那个confiura…的选择libraies<br>找到JRE（这个时候你会发现这个jre前面有!或者是红x）<br>选择remove掉<br>重新为该项目选择一个JRE<br>选中项目，project—-clean<br>刷新项目，问题就解决了</p>
 
       
     </div>

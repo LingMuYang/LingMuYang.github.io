@@ -88,17 +88,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本篇播客讲的是如何在linux上如何部署一个新完成的项目，如有错误请联系<a href="mailto:15076117282@163.com" target="_blank" rel="noopener">15076117282@163.com</a></p>
-<p>###Java环境</p>
-<p>#####0.下载jdk8<br>去<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">官网</a>下载最新安装包(可在Windows下下载完成后，通过文件夹共享到Linux上)</p>
-<p>#####1.登录Linux，切换到root用户<br>su root获取root用户权限，当前工作目录不变（需要root密码）<br>或 sudo -i不需要root密码直接切换成root（需要当前用户密码）</p>
-<p>#####2.在usr目录下建立java安装目录<br>cd /usr<br>mkdir java</p>
-<p>#####3.jdk-8u60-linux-x64.tar.gz拷贝到java目录下<br>cp/mnt/hgfs/linux/jdk-8u60-linux-x64.tar.gz/usr/java/<br>（版本根据自己需要自行选择）</p>
-<p>#####4.解压jdk到当前目录<br>tar -zxvf jdk-8u60-linux-x64.tar.gz<br>得到文件夹jdk1.8.0_60</p>
-<p>#####5.安装完毕为他建立一个链接以节省目录长度<br>In -s/usr/java/jdk1.8.0_60/ /usr/jdk</p>
-<p>#####6.编辑配置文件，配置环境变量<br>vim /etc/profile</p>
+<h3 id="Java环境"><a href="#Java环境" class="headerlink" title="Java环境"></a>Java环境</h3><h5 id="0-下载jdk8"><a href="#0-下载jdk8" class="headerlink" title="0.下载jdk8"></a>0.下载jdk8</h5><p>去<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">官网</a>下载最新安装包(可在Windows下下载完成后，通过文件夹共享到Linux上)</p>
+<h5 id="1-登录Linux，切换到root用户"><a href="#1-登录Linux，切换到root用户" class="headerlink" title="1.登录Linux，切换到root用户"></a>1.登录Linux，切换到root用户</h5><p>su root获取root用户权限，当前工作目录不变（需要root密码）<br>或 sudo -i不需要root密码直接切换成root（需要当前用户密码）</p>
+<h5 id="2-在usr目录下建立java安装目录"><a href="#2-在usr目录下建立java安装目录" class="headerlink" title="2.在usr目录下建立java安装目录"></a>2.在usr目录下建立java安装目录</h5><p>cd /usr<br>mkdir java</p>
+<h5 id="3-jdk-8u60-linux-x64-tar-gz拷贝到java目录下"><a href="#3-jdk-8u60-linux-x64-tar-gz拷贝到java目录下" class="headerlink" title="3.jdk-8u60-linux-x64.tar.gz拷贝到java目录下"></a>3.jdk-8u60-linux-x64.tar.gz拷贝到java目录下</h5><p>cp/mnt/hgfs/linux/jdk-8u60-linux-x64.tar.gz/usr/java/<br>（版本根据自己需要自行选择）</p>
+<h5 id="4-解压jdk到当前目录"><a href="#4-解压jdk到当前目录" class="headerlink" title="4.解压jdk到当前目录"></a>4.解压jdk到当前目录</h5><p>tar -zxvf jdk-8u60-linux-x64.tar.gz<br>得到文件夹jdk1.8.0_60</p>
+<h5 id="5-安装完毕为他建立一个链接以节省目录长度"><a href="#5-安装完毕为他建立一个链接以节省目录长度" class="headerlink" title="5.安装完毕为他建立一个链接以节省目录长度"></a>5.安装完毕为他建立一个链接以节省目录长度</h5><p>In -s/usr/java/jdk1.8.0_60/ /usr/jdk</p>
+<h5 id="6-编辑配置文件，配置环境变量"><a href="#6-编辑配置文件，配置环境变量" class="headerlink" title="6.编辑配置文件，配置环境变量"></a>6.编辑配置文件，配置环境变量</h5><p>vim /etc/profile</p>
 <p>添加如下内容：JAVA_HOME根据实际目录来<br>JAVA_HOME=/usr/java/jdk1.8.0_60<br>CLASSPATH=$JAVA_HOME/lib/<br>PATH=$PATH:$JAVA_HOME/bin<br>export PATH JAVA_HOME CLASSPATH</p>
-<p>#####7.重启机器或者执行命令<br>source /etc/profile</p>
-<p>#####8.查看安装情况<br>java -version</p>
+<h5 id="7-重启机器或者执行命令"><a href="#7-重启机器或者执行命令" class="headerlink" title="7.重启机器或者执行命令"></a>7.重启机器或者执行命令</h5><p>source /etc/profile</p>
+<h5 id="8-查看安装情况"><a href="#8-查看安装情况" class="headerlink" title="8.查看安装情况"></a>8.查看安装情况</h5><p>java -version</p>
 <p>###Tomcat安装开始<br>1.先在/usr下新建tomcat文件夹，并把安装包拷贝进来<br>cd /usr/tomcat<br>tar xvf apache-tomcat-8.5.12.tar.gz<br>2.配置环境变量 vi /etc/profile<br>CATALINA=/usr/tomcat/apache-tomcat-8.5.12<br>3.使修改生效<br>source /etc/profile<br>4.启动tomcat<br>在bin目录下./startup.sh</p>
 <p>###mysql安装</p>
 <p>#####centos6.6下安装Mysql很简单<br>yum list mysql-server<br><img src="https://raw.githubusercontent.com/LingMuYang/LingMuYang.github.io/master/images/1.bmp" alt=""></p>
@@ -149,9 +148,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本片博客记录一些自己在使用myeclipse中遇到的一些问题，如有错误请联系<br><a href="mailto:15076117282@163.com" target="_blank" rel="noopener">15076117282@163.com</a></p>
-<p>###1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved</p>
-<p>#####原因：<br>这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myeclipse\xxxx）,结果，你现在换了一个，原来的没了，就导致出现这种错误，基本的java.lang或者util包都找不到</p>
-<p>#####解决方案<br>右键项目—》buildpath—》最下边那个confiura…的选择libraies<br>找到JRE（这个时候你会发现这个jre前面有!或者是红x）<br>选择remove掉<br>重新为该项目选择一个JRE<br>选中项目，project—-clean<br>刷新项目，问题就解决了</p>
+<h3 id="1-新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the-import-java-util-cannot-be-resolved"><a href="#1-新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the-import-java-util-cannot-be-resolved" class="headerlink" title="1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved"></a>1.新安装MyEclipse，导入以前做的程序后程序里好多错误，提示the import java.util cannot be resolved</h3><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>这是由于你的项目buildpath不对，原来的项目，比如采用了原先的MyEclipse自带的jdk（D:\myeclipse\xxxx）,结果，你现在换了一个，原来的没了，就导致出现这种错误，基本的java.lang或者util包都找不到</p>
+<h5 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h5><p>右键项目—》buildpath—》最下边那个confiura…的选择libraies<br>找到JRE（这个时候你会发现这个jre前面有!或者是红x）<br>选择remove掉<br>重新为该项目选择一个JRE<br>选中项目，project—-clean<br>刷新项目，问题就解决了</p>
 
       
     </div>
